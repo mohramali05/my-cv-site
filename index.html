@@ -155,7 +155,6 @@
       font-size: 0.9rem;
     }
 
-    /* Contact Buttons */
     .contact-buttons a {
       display: inline-block;
       margin: 10px;
@@ -177,7 +176,7 @@
 </head>
 <body>
 
-  <video id="bgVideo" class="video-bg" autoplay muted loop playsinline>
+  <video id="bgVideo" class="video-bg" autoplay muted playsinline>
     <source src="v1.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
@@ -240,7 +239,7 @@
       <a href="https://github.com/mohramali05" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/mohram-ali-781804184/" target="_blank">LinkedIn</a>
       <a href="tel:+923343700894">Call Me</a>
-      <a href="Mohram_Ali_CV.pdf" target="_blank">View CV</a>
+      <a href="cv.pdf" target="_blank">View CV</a>
     </div>
   </section>
 
@@ -255,7 +254,9 @@
 
     bgVideo.addEventListener('ended', () => {
       currentVideo = (currentVideo + 1) % videos.length;
-      bgVideo.src = videos[currentVideo];
+      bgVideo.pause();
+      bgVideo.setAttribute("src", videos[currentVideo]);
+      bgVideo.load();
       bgVideo.play();
     });
   </script>
