@@ -2,26 +2,199 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohram Ali | Software Engineer & Cybersecurity Enthusiast</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Mohram Ali - Software Engineer, AI & Cybersecurity Enthusiast, IoT Innovator, Volunteer. Explore my projects, skills, and resume.">
-  <meta name="keywords" content="Mohram Ali, software engineer, AI, deep learning, cybersecurity, Kali Linux, IoT, portfolio, GitHub Pages, resume">
-  <meta name="author" content="Mohram Ali">
-  <meta name="robots" content="index, follow">
-
-  <!-- Google Site Verification -->
-  <meta name="google-site-verification" content="Tckdg9Ndy5XW7QhEjB9UTzbpXdPddKgqbGPsmjY454U" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="google-site-verification" content="Tckdg9Ndy5XW7QhEjB9UTzbpXdPddKgqbGPsmjY454U" /> <!-- Google Site Verification -->
+  <meta name="description" content="Mohram Ali's portfolio showcasing software engineering projects, skills in AI, Cybersecurity, IoT, and deep learning." />
+  <meta name="keywords" content="Mohram Ali, Software Engineer, AI Enthusiast, Cybersecurity, IoT, Deep Learning, Portfolio" />
+  <meta name="author" content="Mohram Ali" />
+  <meta property="og:title" content="Mohram Ali | Portfolio" />
+  <meta property="og:description" content="Explore the portfolio of Mohram Ali, a software engineer with a focus on AI, cybersecurity, and IoT systems." />
+  <meta property="og:image" content="pic.jpg" />
+  <meta property="og:url" content="https://mohramali05.github.io/my-cv-site/" />
+  <title>Mohram Ali | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-
   <style>
-    /* (Your full CSS remains unchanged here for brevity) */
-    /* Keep all styles from the previous version */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffd0;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid #00ffd0;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      font-weight: 800;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      max-width: 600px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #00ffd0, #007cf0);
+      color: #000;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 255, 208, 0.7);
+    }
+
+    section {
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      margin: 20px auto;
+      border-radius: 15px;
+      max-width: 1000px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .skills-grid, .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .skill-card, .project-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .skill-card:hover, .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      background: rgba(0, 0, 0, 0.9);
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    .contact-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      background: #007cf0;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .contact-buttons a:hover {
+      background: #00ffd0;
+      color: #000;
+      transform: translateY(-3px);
+    }
+
+    #certifications ul {
+      list-style: none;
+      padding: 0;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    #certifications li {
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 <body>
+
   <video id="bgVideo" class="video-bg" autoplay muted loop playsinline>
     <source src="v1.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
@@ -40,14 +213,14 @@
 
   <section class="hero">
     <img src="pic.jpg" alt="Mohram Ali">
-    <h2>🚀 Software Engineer | Deep Learning & Cybersecurity Enthusiast</h2>
-    <p>Welcome to my digital space! I specialize in building impactful software, exploring deep learning, cybersecurity (Kali Linux), and IoT innovations.</p>
+    <h2>🚀 Software Engineer | AI & Cybersecurity Enthusiast | IoT Innovator | Kali Linux Explorer | Volunteer</h2>
+    <p>Welcome to my digital space! I specialize in building impactful software,Explorer Deep learning,AI & Cybersecurity Enthusiast , and creating IoT solutions that matter.</p>
     <a class="btn" href="#contact">Let's Connect</a>
   </section>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a passionate Software Engineering student at Muslim Youth University with a deep interest in full-stack web development, IoT systems, deep learning, and cybersecurity tools like Kali Linux.</p>
+    <p>I’m a passionate Software Engineering student at Muslim Youth University with a deep interest in full-stack web development, IoT systems, and machine learning projects.</p>
   </section>
 
   <section id="skills">
@@ -56,8 +229,8 @@
       <div class="skill-card">C++, Python, JavaScript</div>
       <div class="skill-card">HTML5, CSS3, Bootstrap</div>
       <div class="skill-card">Kaggle, GitHub, Anaconda</div>
-      <div class="skill-card">Deep Learning, IoT, Kali Linux</div>
-      <div class="skill-card">Cybersecurity Basics, Data Entry</div>
+      <div class="skill-card">Deep Learning, IoT Systems</div>
+      <div class="skill-card">Amazon FBA/FBM, Data Entry</div>
     </div>
   </section>
 
@@ -66,27 +239,27 @@
     <div class="projects-grid">
       <div class="project-card">
         <h3>🤖 Human-Following Robot</h3>
-        <p>IoT-based robot capable of real-time human tracking using smart sensors and ML.</p>
+        <p>IoT-based robot capable of real-time human tracking using smart sensors and machine learning.</p>
       </div>
       <div class="project-card">
         <h3>🧠 Kaggle Deep Learning</h3>
-        <p>AI models solving real-world problems on Kaggle with deep learning techniques.</p>
+        <p>Developed AI models for solving real-world challenges with top performance on Kaggle datasets.</p>
       </div>
       <div class="project-card">
         <h3>📡 Anaconda IoT App</h3>
-        <p>Smart IoT app using Anaconda for data analytics and automation.</p>
+        <p>Built a smart IoT app using Anaconda for data analytics and real-time automation.</p>
       </div>
     </div>
   </section>
 
   <section id="certifications">
     <h2>Certifications & Achievements</h2>
-    <ul style="text-align:left; max-width:800px; margin: 0 auto;">
-      <li>Appreciation Award – Participation in Science Fair (IBA Sukkur, 2018)</li>
-      <li>Volunteer Certificate – New Foundation Higher Secondary School</li>
-      <li>Certificate of Participation – Career in Cyber Security (Turing Coding Club)</li>
-      <li>Certificate of Participation – Core Data & Azure Storage (Microsoft Learn Student Ambassador)</li>
-      <li><strong>Scholarship Award:</strong> Sindh Education Foundation (SEF), 2020 – Academic Excellence</li>
+    <ul>
+      <li>• Appreciation Award – Participation in Science Fair (IBA Sukkur, 2018)</li>
+      <li>• Volunteer Certificate – New Foundation Higher Secondary School</li>
+      <li>• Certificate of Participation: Career in Cyber Security – Turing Coding Club</li>
+      <li>• Certificate of Participation: Introduction to Core Data & Azure Storage – Microsoft Learn Student Ambassador</li>
+      <li>• <strong>Scholarship Award:</strong> Secured a scholarship from Sindh Education Foundation (SEF) in 2020 for academic excellence.</li>
     </ul>
   </section>
 
@@ -97,7 +270,7 @@
       <a href="https://github.com/mohramali05" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/mohram-ali-781804184/" target="_blank">LinkedIn</a>
       <a href="tel:+923343700894">Call Me</a>
-      <a href="cv.pdf" target="_blank">View CV</a>
+      <a href="Mohram_Ali_CV.pdf" target="_blank">View CV</a>
     </div>
   </section>
 
@@ -116,5 +289,6 @@
       bgVideo.play();
     });
   </script>
+
 </body>
 </html>
