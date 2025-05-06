@@ -5,17 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohram Ali | Software Engineer & Cybersecurity Enthusiast</title>
 
-  <!-- ✅ SEO Tags -->
+  <!-- SEO Meta Tags -->
   <meta name="description" content="Mohram Ali - Software Engineer, AI & Cybersecurity Enthusiast, IoT Innovator, Volunteer. Explore my projects, skills, and resume.">
   <meta name="keywords" content="Mohram Ali, software engineer, AI, deep learning, cybersecurity, Kali Linux, IoT, portfolio, GitHub Pages, resume">
   <meta name="author" content="Mohram Ali">
   <meta name="robots" content="index, follow">
 
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="Tckdg9Ndy5XW7QhEjB9UTzbpXdPddKgqbGPsmjY454U" />
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-  <!-- (Keep your CSS and other content unchanged from before) -->
+
+  <style>
+    /* (Your full CSS remains unchanged here for brevity) */
+    /* Keep all styles from the previous version */
+  </style>
 </head>
 <body>
-  <!-- Your existing site content here -->
-  <!-- ...everything from video background, header, hero, sections, footer, script... -->
+  <video id="bgVideo" class="video-bg" autoplay muted loop playsinline>
+    <source src="v1.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <header>
+    <h1>Mohram Ali</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="pic.jpg" alt="Mohram Ali">
+    <h2>🚀 Software Engineer | Deep Learning & Cybersecurity Enthusiast</h2>
+    <p>Welcome to my digital space! I specialize in building impactful software, exploring deep learning, cybersecurity (Kali Linux), and IoT innovations.</p>
+    <a class="btn" href="#contact">Let's Connect</a>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate Software Engineering student at Muslim Youth University with a deep interest in full-stack web development, IoT systems, deep learning, and cybersecurity tools like Kali Linux.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">C++, Python, JavaScript</div>
+      <div class="skill-card">HTML5, CSS3, Bootstrap</div>
+      <div class="skill-card">Kaggle, GitHub, Anaconda</div>
+      <div class="skill-card">Deep Learning, IoT, Kali Linux</div>
+      <div class="skill-card">Cybersecurity Basics, Data Entry</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>🤖 Human-Following Robot</h3>
+        <p>IoT-based robot capable of real-time human tracking using smart sensors and ML.</p>
+      </div>
+      <div class="project-card">
+        <h3>🧠 Kaggle Deep Learning</h3>
+        <p>AI models solving real-world problems on Kaggle with deep learning techniques.</p>
+      </div>
+      <div class="project-card">
+        <h3>📡 Anaconda IoT App</h3>
+        <p>Smart IoT app using Anaconda for data analytics and automation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications & Achievements</h2>
+    <ul style="text-align:left; max-width:800px; margin: 0 auto;">
+      <li>Appreciation Award – Participation in Science Fair (IBA Sukkur, 2018)</li>
+      <li>Volunteer Certificate – New Foundation Higher Secondary School</li>
+      <li>Certificate of Participation – Career in Cyber Security (Turing Coding Club)</li>
+      <li>Certificate of Participation – Core Data & Azure Storage (Microsoft Learn Student Ambassador)</li>
+      <li><strong>Scholarship Award:</strong> Sindh Education Foundation (SEF), 2020 – Academic Excellence</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-buttons">
+      <a href="mailto:mohrammahar36@gmail.com">Email</a>
+      <a href="https://github.com/mohramali05" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/mohram-ali-781804184/" target="_blank">LinkedIn</a>
+      <a href="tel:+923343700894">Call Me</a>
+      <a href="cv.pdf" target="_blank">View CV</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mohram Ali. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const videos = ["v1.mp4", "v2.mp4", "v3.mp4"];
+    let currentVideo = 0;
+    const bgVideo = document.getElementById('bgVideo');
+
+    bgVideo.addEventListener('ended', () => {
+      currentVideo = (currentVideo + 1) % videos.length;
+      bgVideo.src = videos[currentVideo];
+      bgVideo.play();
+    });
+  </script>
 </body>
 </html>
